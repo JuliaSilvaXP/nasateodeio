@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de Exploração Espacial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Diário de Exploração Espacial</h1>
+        </header>
+       
+        <section class="apod-card glass-panel">
+            <h2>Imagem Astronômica do Dia (APOD)</h2>
+            <div id="apod-container">
+                <img id="apod-image" src="" alt="Carregando imagem da NASA..." style="display: none;">
+                <p id="apod-title">Buscando dados da NASA...</p>
+                <p id="apod-desc" class="apod-text"></p>
+            </div>
+        </section>
+
+    
+        <section class="form-section glass-panel">
+            <h2>Adicionar Novo Registro</h2>
+            <form id="registro-form">
+                <div class="input-group">
+                    <label for="titulo">Título do Registro (ex: Missão Apollo 11):</label>
+                    <input type="text" id="titulo" required placeholder="Digite o nome do planeta, missão ou observação...">
+                </div>
+                
+                <div class="input-group">
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria" required>
+                        <option value="Planeta Favorito">Planeta Favorito</option>
+                        <option value="Missão Espacial">Missão Espacial</option>
+                        <option value="Corpo Celeste">Corpo Celeste</option>
+                        <option value="Observação Pessoal">Observação Pessoal</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="descricao">Descrição / Observações:</label>
+                    <textarea id="descricao" rows="3" required placeholder="Escreva seus pensamentos ou dados sobre este item..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">Salvar no Diário</button>
+            </form>
+        </section>
+
+        
+        <section class="lista-section glass-panel">
+            <h2>Meus Registros Salvos</h2>
+            <div id="lista-registros">
+                <p class="empty-state">Nenhum registro encontrado. Comece adicionando um acima!</p>
+            </div>
+        </section>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
